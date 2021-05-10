@@ -12,7 +12,7 @@
 ## DESCRIPTION
 In this repository is a web application that is a simple task board. It allows users to add, edit, and remove tasks. Additionally, users can create "lanes" for their tasks and move tasks between them.
 
-## HOW TO USE
+## HOW TO RUN
 
 Install docker, then clone a copy of the code from this repository and execute the following command in the CommonCents folder:
 
