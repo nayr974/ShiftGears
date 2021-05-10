@@ -1,0 +1,54 @@
+.delete {
+  padding: 8px;
+  font-size: 18px;
+  color: #dedede;
+}
+
+.title {
+  flex-grow: 1;
+  margin-left: 25px;
+  color: #dedede !important;
+}
+.title > div {
+  color: #dedede !important;
+}
+.title svg {
+  color: #dedede !important;
+}
+
+.laneColor {
+  background-color: #2b2c33;
+}
+
+.laneHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.hoverColor {
+  background-color: #1d1d22;
+}
+
+.lane {
+  flex: 0 0 400px;
+  height: fit-content;
+  border-radius: 0.7em;
+  padding: 1em;
+  border-left-color: #dedede;
+  border-right-color: #dedede;
+  border-width: 12px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-style: solid;
+}
+
+.centerLine {
+  background: repeating-linear-gradient(
+      to bottom,
+      #fffb00,
+      #fffb00 48px,
+      #2b2c33 48px,
+      #2b2c33 96px
+    )
+    no-repeat center/12px 100%;
+}

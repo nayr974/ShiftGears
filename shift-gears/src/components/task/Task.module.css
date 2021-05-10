@@ -1,0 +1,8 @@
+.task {
+  border-radius: 0.5em;
+  margin-bottom: 10px;
+}
+
+.task > ul {
+  border-radius: 0.5em;
+}

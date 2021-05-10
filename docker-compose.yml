@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  nginx-react:
+    container_name: shiftgears
+    build:
+        context: shift-gears/
+    command: "nginx -g 'daemon off;'"
+    restart: always
+    ports:
+      - "80:80"
+    expose:
+      - "80"
+    networks:
+      - shiftgears
+
+networks:
+  shiftgears:
+    driver: bridge

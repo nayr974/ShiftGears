@@ -1,0 +1,19 @@
+.add {
+  flex: 0 0 400px;
+  height: fit-content;
+  width: 400px;
+  text-align: left;
+  padding: 64px;
+  border-style: dashed;
+  border-color: transparent;
+  border-radius: 0.7em;
+  border-width: 6px;
+  color: #dedede;
+  text-align: center;
+  font-size: 1.5em;
+}
+.add:hover {
+  border-color: #dedede;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.33);
+}

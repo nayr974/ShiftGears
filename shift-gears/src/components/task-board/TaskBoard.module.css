@@ -1,0 +1,46 @@
+.taskboard {
+  padding-top: 76px;
+  display: flex;
+  width: fit-content;
+  min-height: calc(100vh - 64px);
+  gap: 24px;
+  margin: 24px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  gap: 4px;
+}
+
+.title {
+  padding-left: 12px;
+  font-size: 2.5em;
+  line-height: 0;
+  font-weight: bolder;
+}
+.subtitle {
+  padding-left: 12px;
+  font-size: 1.5em;
+  line-height: 0;
+  font-style: italic;
+}
+
+.header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  padding-left: 24px;
+  color: #fff;
+  background-color: #123028;
+}
+.header > img {
+  width: 64px;
+  height: 64px;
+}
