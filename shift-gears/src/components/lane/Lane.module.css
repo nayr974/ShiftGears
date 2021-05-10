@@ -25,7 +25,7 @@
   flex-direction: row;
 }
 
-.hoverColor {
+.dragColor {
   background-color: #1d1d22;
 }
 
@@ -49,6 +49,16 @@
       #fffb00 48px,
       #2b2c33 48px,
       #2b2c33 96px
+    )
+    no-repeat center/12px 100%;
+}
+.dragCenterLine {
+  background: repeating-linear-gradient(
+      to bottom,
+      #fffb00,
+      #fffb00 48px,
+      #1d1d22 48px,
+      #1d1d22 96px
     )
     no-repeat center/12px 100%;
 }

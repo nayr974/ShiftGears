@@ -2,6 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
 import { TaskPriority } from "app/models";
 
+// TODO: I'm not sure these constants and factory functions belong here, and should be moved.
+const firstTask = {
+  id: uuid(),
+  title: "Welcome to ShiftGears!",
+  priority: TaskPriority.LOW,
+  content:
+    "<p>Hi! This is a simple task organizer to kick your productivity into high gear.</p><p>Try it out:</p><ul><li><strong>Add new tasks</strong> by clicking “Add another task” at the bottom of any lane.</li><li><strong>Edit, or delete tasks</strong> by clicking the pencil or trash can icons on that task.</li><li><strong>Move tasks around</strong> by clicking and dragging them.</li><li>You can also <strong>add, remove, and edit lanes</strong>!</li></ul>",
+};
+
 const hireRyanTask = {
   id: uuid(),
   title: "Quick, hire this guy!",
@@ -9,10 +18,9 @@ const hireRyanTask = {
   content: "<p>This Ryan person is <i>solid</i>. I should hire them.</p>",
 };
 
-// TODO: I don't think these factory functions belong here, and should be moved.
 const getDefaultTask = () => ({
   id: uuid(),
-  title: "Your new task!",
+  title: "Your new task",
   priority: TaskPriority.MEDIUM,
   content:
     "<p>Click the <strong>pencil</strong> button below to edit, then describe and save your task!</p>",
@@ -33,7 +41,7 @@ const initialState = {
       {
         id: uuid(),
         title: "To Do",
-        tasks: [getDefaultTask()],
+        tasks: [firstTask],
       },
       {
         id: uuid(),

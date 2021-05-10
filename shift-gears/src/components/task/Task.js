@@ -35,7 +35,11 @@ const Task = (props) => {
             title={props.task.title}
             extra={<TaskPriorityIcon priority={props.task.priority} />}
             actions={[
-              <EditOutlined key="edit" onClick={() => setEditing(true)} />,
+              <EditOutlined
+                key="edit"
+                className={styles.icon}
+                onClick={() => setEditing(true)}
+              />,
 
               <Popconfirm
                 key="delete"
@@ -44,7 +48,7 @@ const Task = (props) => {
                 okText="Yes"
                 cancelText="No"
               >
-                <DeleteOutlined />
+                <DeleteOutlined className={styles.icon} />
               </Popconfirm>,
             ]}
           >

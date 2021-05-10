@@ -31,10 +31,16 @@ const Lane = (props) => {
           {...provided.droppableProps}
           ref={provided.innerRef}
           className={`${styles.lane} ${
-            snapshot.isDraggingOver ? styles.hoverColor : styles.laneColor
+            snapshot.isDraggingOver ? styles.dragColor : styles.laneColor
           }`}
         >
-          <div className={styles.centerLine}>
+          <div
+            className={
+              snapshot.isDraggingOver
+                ? styles.dragCenterLine
+                : styles.centerLine
+            }
+          >
             <div className={styles.laneHeader}>
               <Title level={4} className={styles.title}>
                 <Paragraph
