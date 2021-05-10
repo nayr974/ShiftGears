@@ -29,6 +29,7 @@ const Lane = (props) => {
         >
           <LaneView
             lane={props.lane}
+            isDraggingOver={snapshot.isDraggingOver}
             onAdd={() => dispatch(addTaskByLaneId(props.lane.id))}
             onEdit={(value) =>
               dispatch(updateLane({ ...props.lane, title: value }))
