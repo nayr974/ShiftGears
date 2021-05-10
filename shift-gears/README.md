@@ -14,7 +14,7 @@ Run `npm install` in the /shift-gears folder to install node module dependencies
 
 ### React
 
-[React](https://reactjs.org/) Allows the building of complex user interfaces using declartive, functional components.
+[React](https://reactjs.org/) allows the building of complex user interfaces using declartive, functional components.
 
 ### Redux
 
