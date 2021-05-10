@@ -1,5 +1,7 @@
 # The ShiftGears Task Board - Revving up your productivity
 
+[Get started right away with ShiftGears by clicking this link!](https://nayr974.github.io/)
+
 ## TABLE OF CONTENTS
 [Description](#description)
 
