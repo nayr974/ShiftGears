@@ -8,7 +8,7 @@ const firstTask = {
   title: "Welcome to ShiftGears!",
   priority: TaskPriority.LOW,
   content:
-    "<p>Hi! This is a simple task organizer to kick your productivity into high gear.</p><p>Try it out:</p><ul><li><strong>Add new tasks</strong> by clicking “Add another task” at the bottom of any lane.</li><li><strong>Edit, or delete tasks</strong> by clicking the pencil or trash can icons on that task.</li><li><strong>Move tasks around</strong> by clicking and dragging them.</li><li>You can also <strong>add, remove, and edit lanes</strong>!</li></ul>",
+    "<center><img width='300px' src='https://cdn.dribbble.com/users/3347131/screenshots/6663172/smallworld.gif'/></center><br/><p>Hi! This is a simple task organizer to kick your productivity <i>into high gear</i>.</p><p>Try it out:</p><ul><li><strong>Add new tasks</strong> by clicking “Add another task” at the bottom of any lane.</li><li><strong>Edit, or delete tasks</strong> by clicking the pencil or trash can icons on that task.</li><li><strong>Move tasks around</strong> by clicking and dragging them.</li><li>You can also <strong>add, remove, and edit lanes</strong>!</li></ul>",
 };
 
 const hireRyanTask = {

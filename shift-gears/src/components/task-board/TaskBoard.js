@@ -16,7 +16,6 @@ const TaskBoard = () => {
           <img src={"/img/logo.png"} alt="ShiftGears Logo" />
           <div className={styles.titleContainer}>
             <span className={styles.title}>{taskBoard.title}</span>
-            <br />
             <span className={styles.subtitle}>{taskBoard.subtitle}</span>
           </div>
         </div>
