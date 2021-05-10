@@ -27,5 +27,5 @@ test("renders app title", () => {
     </Provider>
   );
 
-  expect(getByText(/ShiftGears/i)).toBeInTheDocument();
+  expect(getByText(/ShiftGears Task Board/i)).toBeInTheDocument();
 });

@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
 import { TaskPriority } from "app/models";
+import { message } from "antd";
+
+const localStorage = window.localStorage;
+const savedTaskBoard = JSON.parse(localStorage.getItem("taskBoard"));
 
 // TODO: I'm not sure these constants and factory functions belong here, and should be moved.
 const firstTask = {
@@ -32,7 +36,7 @@ const getDefaultLane = () => ({
   tasks: [],
 });
 
-const initialState = {
+const defaultState = {
   taskCounter: 0,
   taskBoard: {
     title: "ShiftGears Task Board",
@@ -52,6 +56,11 @@ const initialState = {
   },
 };
 
+const initialState = {
+  ...defaultState,
+  taskBoard: savedTaskBoard || defaultState.taskBoard,
+};
+
 // Redux Toolkit allows us to write "mutating" logic in reducers. It
 // doesn't actually mutate the state because it uses the Immer library,
 // which detects changes to a "draft state" and produces a brand new
@@ -62,6 +71,16 @@ export const taskBoardSlice = createSlice({
   reducers: {
     updateTaskBoard: (state, action) => {
       state.taskBoard = action.payload;
+    },
+    saveTaskBoard: (state) => {
+      localStorage.setItem("taskBoard", JSON.stringify(state.taskBoard));
+      message.success("Task board saved.");
+    },
+    resetTaskBoard: (state) => {
+      localStorage.removeItem("taskBoard");
+      state.taskBoard = defaultState.taskBoard;
+      state.taskCounter = 0;
+      message.warning("Task board reset");
     },
     addTaskByLaneId: (state, action) => {
       state.taskCounter++;
@@ -143,6 +162,8 @@ export const taskBoardSlice = createSlice({
 
 export const {
   updateTaskBoard,
+  saveTaskBoard,
+  resetTaskBoard,
   addTaskByLaneId,
   updateTask,
   moveTask,
